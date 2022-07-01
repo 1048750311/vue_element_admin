@@ -1,7 +1,12 @@
 <template>
-  <el-menu background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse" router :default-active="activePath">
-    <h3>{{ isCollapse ? '后台' : '通用后台管理系统' }}</h3>
+  <el-menu background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" class="el-menu-vertical-demo"
+    @open="handleOpen" @close="handleClose" :collapse="isCollapse" router :default-active="activePath">
+    <h3>{{ isCollapse ? '后台' : '通用设备管理后台' }}</h3>
     <!-- :index="item.path+''"记得加+''变字符串 -->
+    <el-menu-item index="/Welcome" @click.native="saveNavState('/Welcome')">
+      <i class="el-icon-menu"></i>
+      <span slot="title">首页</span>
+    </el-menu-item>
     <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
       <!-- 一级菜单的模板区域 -->
       <template slot="title">
@@ -12,7 +17,8 @@
       </template>
 
       <!-- 二级菜单 -->
-      <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id" @click="saveNavState('/' + subItem.path)">
+      <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id"
+        @click="saveNavState('/' + subItem.path)">
         <template slot="title">
           <!-- 图标 -->
           <i class="el-icon-menu"></i>
@@ -50,11 +56,6 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath)
-    },
-    clickMenu(item) {
-      this.$router.push({
-        name: item.name
-      })
     },
     logout() {
       window.sessionStorage.clear()
