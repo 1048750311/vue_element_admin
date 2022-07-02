@@ -19,6 +19,11 @@ import './icons/index' // icon
 import 'normalize.css/normalize.css'
 // 配置请求的跟路径
 axios.defaults.baseURL = 'http://119.29.86.152:3010/api/private/v1/'
+// const routerPush = Router.prototype.push
+// Router.prototype.push = function push(location) {
+// return routerPush.call(this, location).catch(error=> error)
+// }
+// Vue.use(VueRouter)
 // 在 request 拦截器中，展示进度条 NProgress.start()
 axios.interceptors.request.use(config => {
   // console.log(config)

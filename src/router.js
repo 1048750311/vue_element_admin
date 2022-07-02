@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+// const routerPush = Router.prototype.push
+// Router.prototype.push = function push(location) {
+//   return routerPush.call(this, location).catch(error => error)
+// }
 // import Login from './components/Login.vue'
 const Login = () => import(/* webpackChunkName: "login_home_welcome" */ './components/Login.vue')
 // import Home from './components/Home.vue'
@@ -33,10 +36,10 @@ const OnlineUsers = () => import(/* webpackChunkName: "Order_Report" */ './compo
 
 Vue.use(Router)
 
-const originalPush = Router.prototype.push
-Router.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
-}
+// const originalPush = Router.prototype.push
+// Router.prototype.push = function push(location) {
+//   return originalPush.call(this, location).catch(err => err)
+// }
 const router = new Router({
   routes: [
     { path: '/', redirect: '/login' },

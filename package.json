@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "echarts": "^4.1.0",
-    "element-ui": "^2.15.9",
+    "element-ui": "2.15.9",
     "loadsh": "^0.0.4",
     "lodash": "^4.17.11",
     "mockjs": "1.1.0",
@@ -24,7 +24,7 @@
     "svgo": "^2.8.0",
     "vue": "^2.5.22",
     "vue-quill-editor": "^3.0.6",
-    "vue-router": "^3.0.1",
+    "vue-router": "3.0",
     "vue-table-with-tree-grid": "^0.2.4",
     "vuex": "3.6.2"
   },
