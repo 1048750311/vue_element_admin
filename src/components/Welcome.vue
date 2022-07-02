@@ -24,8 +24,8 @@
     <el-col style="margin-top: 20px" :span="16">
       <div class="num">
         <!-- 注意flex布局 -->
-        <el-card v-for="item in countData" :key="item.name" :body-style="{ display: 'flex', padding: 0 }"
-          shadow="hover">
+        <el-card class="noBorder" v-for="item in countData" :key="item.name"
+          :body-style="{ display: 'flex', padding: 0 }" shadow="hover">
           <i class="icon" :class="`el-icon-${item.icon}`" :style="{ background: item.color }"></i>
           <div class="detail">
             <p class="num">￥{{ item.value }}</p>
@@ -77,7 +77,7 @@ export default {
       countData: [
         {
           name: '今日支付订单',
-          value: 1234,
+          value: 34,
           icon: 'success',
           color: '#2ec7c9'
         },
@@ -95,19 +95,19 @@ export default {
         },
         {
           name: '本月支付订单',
-          value: 1234,
+          value: 1224,
           icon: 'success',
           color: '#2ec7c9'
         },
         {
           name: '本月收藏订单',
-          value: 210,
+          value: 739,
           icon: 'star-on',
           color: '#ffb980'
         },
         {
           name: '本月未支付订单',
-          value: 1234,
+          value: 15,
           icon: 's-goods',
           color: '#5ab1ef'
         }
@@ -305,78 +305,95 @@ export default {
 </script>
 <style lang="less" scoped>
 .home {
-    .user {
-      display: flex;
-      align-items: center;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #ccc;
-      img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-right: 40px;
-      }
-      &info {
-        .name {
-          font-size: 32px;
-          margin-bottom: 10px;
-        }
-        .access {
-          color: #999999;
-        }
-      }
+  .user {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 40px;
     }
-    .login-info {
-      p {
-        line-height: 28px;
-        font-size: 14px;
+
+    &info {
+      .name {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .access {
         color: #999999;
-        span {
-          color: #666666;
-          margin-left: 60px;
-        }
-      }
-    }
-    .num {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .el-card {
-        width: 32%;
-        margin-bottom: 20px;
-      }
-      .icon {
-        font-size: 30px;
-        width: 80px;
-        height: 80px;
-        text-align: center;
-        line-height: 80px;
-        color: #fff;
-      }
-      .detail {
-        margin-left: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .num {
-          font-size: 30px;
-          margin-bottom: 10px;
-        }
-        .txt {
-          font-size: 14px;
-          text-align: center;
-          color: #999999;
-        }
-      }
-    }
-    .graph {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      .el-card {
-        width: 48%;
       }
     }
   }
+
+  .login-info {
+    p {
+      line-height: 28px;
+      font-size: 14px;
+      color: #999999;
+
+      span {
+        color: #666666;
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .num {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .el-card {
+      width: 32%;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 30px;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+      color: #fff;
+    }
+
+    .detail {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .num {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .txt {
+        font-size: 14px;
+        text-align: center;
+        color: #999999;
+      }
+    }
+  }
+
+  .graph {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .el-card {
+      width: 48%;
+    }
+  }
+}
+
+.noBorder {
+  border: none !important;
+}
 </style>

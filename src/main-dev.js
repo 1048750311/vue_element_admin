@@ -24,7 +24,7 @@ import axios from 'axios'
 import './assets/css/reset.less'
 import './icons/index' // icon
 // 配置请求的跟路径
-axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+axios.defaults.baseURL = 'http://119.29.86.152:3010/api/private/v1/'
 // 在 request 拦截器中，展示进度条 NProgress.start()
 axios.interceptors.request.use(config => {
   // console.log(config)

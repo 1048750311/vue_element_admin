@@ -52,7 +52,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '36.170.59.114',
         ou_location: '中国',
-        ou_time: '2/7/2022 00:37:48',
+        ou_time: '2022/6/2 00:37:48',
         ou_id: 1
       },
       {
@@ -61,7 +61,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '11.22.33.44',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:49:42',
+        ou_time: '2022/6/2 00:37:48',
         ou_id: 2
       },
       {
@@ -70,7 +70,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '153.154.156.15',
         ou_location: '韩国',
-        ou_time: '2/7/2022 00:51:57',
+        ou_time: '2022/6/2 00:37:48',
         ou_id: 3
       },
       {
@@ -79,7 +79,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '52.244.230.26',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:50:49',
+        ou_time: '2022/6/2 00:37:48',
         ou_id: 4
       },
       {
@@ -88,7 +88,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '210.28.61.83',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:50:54',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 5
       },
       {
@@ -97,7 +97,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '117.245.31.25',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:50:59',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 6
       },
       {
@@ -106,7 +106,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '131.107.110.167',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:51:03',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 7
       },
       {
@@ -115,7 +115,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '3.82.51.102',
         ou_location: '中国深圳',
-        ou_time: '2/7/2022 00:52:03',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 8
       },
       {
@@ -124,7 +124,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '14.175.229.239',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:51:10',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 9
       },
       {
@@ -133,7 +133,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '112.241.106.248',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:51:14',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 10
       },
       {
@@ -142,7 +142,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '115.217.172.102',
         ou_location: '中国',
-        ou_time: '2/7/2022 01:29:32',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 11
       },
       {
@@ -151,7 +151,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '56.77.223.165',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:51:20',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 12
       },
       {
@@ -160,7 +160,7 @@ export default {
         ou_department: '研发部',
         ou_ip: '232.221.245.142',
         ou_location: '中国四川成都',
-        ou_time: '2/7/2022 00:51:26',
+        ou_time: '2022/6/1 12:37:48',
         ou_id: 13
       }
 
@@ -198,6 +198,10 @@ export default {
 
     delAll() {
       this.dataList = []
+      this.$message({
+        message: '全部删除成功',
+        type: 'success'
+      })
     }
   }
 }

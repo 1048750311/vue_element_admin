@@ -6,7 +6,7 @@
       <!-- <h3 style="color:#fff">首页</h3> -->
     </div>
     <div class="r-content">
-      <NowDate/>
+      <NowDate />
       <Screenfull id="screenfull" class="right-menu-item hover-effect" />
       <el-dropdown trigger="click" size="mini">
         <span>
@@ -15,8 +15,8 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>个人中心</el-dropdown-item>
           <el-dropdown-item @click.native="$router.push('/Welcome')">首页</el-dropdown-item>
-          <el-dropdown-item @click.native="">首页</el-dropdown-item>
-          <el-dropdown-item>退出</el-dropdown-item>
+          <el-dropdown-item @click.native="goUrl('https://github.com/1048750311/vue_element_admin')">文档</el-dropdown-item>
+          <el-dropdown-item @>退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -41,6 +41,9 @@ export default {
   methods: {
     handlerMenu() {
       this.$store.commit('collapseMenu')
+    },
+    goUrl(url) {
+      window.open(url, '_blank')
     }
   }
 }
@@ -61,33 +64,37 @@ header {
     margin-right: 20px;
   }
 }
+
 .breadcrumb-container {
-    float: left;
-  }
+  float: left;
+}
+
 .r-content {
   line-height: 60px;
-  display:flex;
+  display: flex;
+
   .user {
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
 }
+
 .right-menu-item {
-      display: inline-block;
-      padding: 0 8px;
-      height: 100%;
-      font-size: 18px;
-      color: #5a5e66;
-      vertical-align: middle;
+  display: inline-block;
+  padding: 0 8px;
+  height: 100%;
+  font-size: 18px;
+  color: #5a5e66;
+  vertical-align: middle;
 
-      &.hover-effect {
-        cursor: pointer;
-        transition: background .3s;
+  &.hover-effect {
+    cursor: pointer;
+    transition: background .3s;
 
-        &:hover {
-          background: rgba(0, 0, 0, .025)
-        }
-      }
+    &:hover {
+      background: rgba(0, 0, 0, .025)
     }
+  }
+}
 </style>
