@@ -29,6 +29,7 @@ const Add = () => import(/* webpackChunkName: "GoodsList_Add" */ './components/g
 const Order = () => import(/* webpackChunkName: "Order_Report" */ './components/order/Order.vue')
 // import Report from './components/report/Report.vue'
 const Report = () => import(/* webpackChunkName: "Order_Report" */ './components/report/Report.vue')
+const OnlineUsers = () => import(/* webpackChunkName: "Order_Report" */ './components/online/index.vue')
 
 Vue.use(Router)
 
@@ -54,7 +55,8 @@ const router = new Router({
         { path: '/goods', component: GoodsList, meta: { title: '商品列表' } },
         { path: '/goods/add', component: Add, meta: { title: '添加商品' } },
         { path: '/orders', component: Order, meta: { title: '订单列表' } },
-        { path: '/reports', component: Report, meta: { title: '数据报表' } }
+        { path: '/reports', component: Report, meta: { title: '数据报表' } },
+        { path: '/onlineusers', component: OnlineUsers, meta: { title: '在线用户' } }
       ]
     }
   ]
