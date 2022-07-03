@@ -4,8 +4,8 @@
       <!-- 搜索与添加区域 -->
       <el-row :gutter="20">
         <el-col :span="5">
-          <el-input placeholder="请输入内容" v-model="search" clearable @clear="getUserList">
-            <el-button slot="append" icon="el-icon-search" @click="getUserList"></el-button>
+          <el-input placeholder="请输入用户名" v-model="search" clearable >
+            <el-button slot="append" icon="el-icon-search" ></el-button>
           </el-input>
         </el-col>
         <el-col :span="2">
@@ -17,7 +17,7 @@
       </el-row>
     </el-card>
     <!--表格渲染-->
-    <el-table ref="table" :data="dataList" style="width: 100%;">
+    <el-table ref="table" :data="dataList.filter(data => !search || data.ou_title.toLowerCase().includes(search.toLowerCase()))" style="width: 100%;">
       <el-table-column type="selection" width="55" />
       <el-table-column prop="ou_id" label="ID" />
       <el-table-column prop="ou_title" label="用户名" />
@@ -56,7 +56,7 @@ export default {
         ou_id: 1
       },
       {
-        ou_title: 'admin',
+        ou_title: 'test',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '11.22.33.44',
@@ -65,7 +65,7 @@ export default {
         ou_id: 2
       },
       {
-        ou_title: 'admin',
+        ou_title: 'hhhh',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '153.154.156.15',
@@ -74,7 +74,7 @@ export default {
         ou_id: 3
       },
       {
-        ou_title: 'admin',
+        ou_title: '老李',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '52.244.230.26',
@@ -83,7 +83,7 @@ export default {
         ou_id: 4
       },
       {
-        ou_title: 'admin',
+        ou_title: '老李1啊',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '210.28.61.83',
@@ -92,7 +92,7 @@ export default {
         ou_id: 5
       },
       {
-        ou_title: 'admin',
+        ou_title: '老六',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '117.245.31.25',
@@ -101,7 +101,7 @@ export default {
         ou_id: 6
       },
       {
-        ou_title: 'admin',
+        ou_title: '小刘',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '131.107.110.167',
@@ -119,7 +119,7 @@ export default {
         ou_id: 8
       },
       {
-        ou_title: 'admin',
+        ou_title: '七七',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '14.175.229.239',
@@ -128,7 +128,7 @@ export default {
         ou_id: 9
       },
       {
-        ou_title: 'admin',
+        ou_title: '大双',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '112.241.106.248',
@@ -137,7 +137,7 @@ export default {
         ou_id: 10
       },
       {
-        ou_title: 'admin',
+        ou_title: '凄然',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '115.217.172.102',
@@ -146,7 +146,7 @@ export default {
         ou_id: 11
       },
       {
-        ou_title: 'admin',
+        ou_title: '小何',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '56.77.223.165',
@@ -155,7 +155,7 @@ export default {
         ou_id: 12
       },
       {
-        ou_title: 'admin',
+        ou_title: '小涛',
         ou_name: '管理员',
         ou_department: '研发部',
         ou_ip: '232.221.245.142',

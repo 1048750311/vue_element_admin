@@ -33,6 +33,7 @@ const Order = () => import(/* webpackChunkName: "Order_Report" */ './components/
 // import Report from './components/report/Report.vue'
 const Report = () => import(/* webpackChunkName: "Order_Report" */ './components/report/Report.vue')
 const OnlineUsers = () => import(/* webpackChunkName: "Order_Report" */ './components/online/index.vue')
+const DeviceRepair = () => import(/* webpackChunkName: "Order_Report" */ './components/components-demo/drag-kanban.vue')
 
 Vue.use(Router)
 
@@ -59,7 +60,8 @@ const router = new Router({
         { path: '/goods/add', component: Add, meta: { title: '添加商品' } },
         { path: '/orders', component: Order, meta: { title: '订单列表' } },
         { path: '/reports', component: Report, meta: { title: '数据报表' } },
-        { path: '/onlineusers', component: OnlineUsers, meta: { title: '在线用户' } }
+        { path: '/onlineusers', component: OnlineUsers, meta: { title: '在线用户' } },
+        { path: '/deviceRepair', component: DeviceRepair, meta: { title: '设备维护' } }
       ]
     }
   ]

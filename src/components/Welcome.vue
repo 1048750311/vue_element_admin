@@ -5,8 +5,7 @@
         <div class="user">
           <img :src="userImg" />
           <div class="userInfo">
-            <p class="name">admin</p>
-            <p class="access">超级管理员</p>
+            <p class="name">{{ username }}</p>
           </div>
         </div>
         <div class="login-info">
@@ -66,6 +65,7 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
+      username: '',
       userImg: require('../assets/images/eva.jpg'),
       tableData: [],
       tableLabel: {
@@ -261,6 +261,7 @@ export default {
     }
   },
   mounted() {
+    this.username = window.sessionStorage.getItem('username')
     let EchartData = this.getEchartData()
     const { code, data } = EchartData
     if (code === 20000) {

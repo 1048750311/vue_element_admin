@@ -1,7 +1,7 @@
 <template>
   <el-menu background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" class="el-menu-vertical-demo"
     @open="handleOpen" @close="handleClose" :collapse="isCollapse" router :default-active="activePath">
-    <h3>{{ isCollapse ? '后台' : '通用设备管理后台' }}</h3>
+    <h3>{{ isCollapse ? '后台' : '智能设备管理后台' }}</h3>
     <!-- :index="item.path+''"记得加+''变字符串 -->
     <el-menu-item index="/Welcome" @click.native="saveNavState('/Welcome')">
       <i class="el-icon-menu"></i>

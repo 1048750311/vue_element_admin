@@ -15,8 +15,8 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>个人中心</el-dropdown-item>
           <el-dropdown-item @click.native="$router.push('/Welcome')">首页</el-dropdown-item>
-          <el-dropdown-item @click.native="goUrl('https://github.com/1048750311/vue_element_admin')">文档</el-dropdown-item>
-          <el-dropdown-item @>退出</el-dropdown-item>
+          <el-dropdown-item>文档</el-dropdown-item>
+          <el-dropdown-item @click.native="logOut">退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -44,6 +44,14 @@ export default {
     },
     goUrl(url) {
       window.open(url, '_blank')
+    },
+    logOut() {
+      window.sessionStorage.clear()
+      this.$router.push('/login')
+      this.$message({
+        message: '退出成功',
+        type: 'success'
+      })
     }
   }
 }
